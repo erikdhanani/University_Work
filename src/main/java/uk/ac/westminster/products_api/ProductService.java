@@ -13,6 +13,11 @@ public class ProductService {
     private final List<Product> products = new ArrayList<>();
     private Long nextId = 1L;
 
+    public ProductService(){
+        addProduct(new DigitalProduct(2L, "psPlus Subscription", 105.66, "Downaload URL", 6048));
+        addProduct(new PhysicalProduct(4L, "Football", 90, 2,"Ball"));
+    }
+
     public List<Product> getAllProducts() {
         return products;
     }
